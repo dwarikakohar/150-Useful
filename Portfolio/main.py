@@ -11,6 +11,7 @@ This is my first Streamlit website!
 * 💻 Building projects to improve my skills
 * 🌱 Always eager to learn new technologies
 """)
+        st.image("1.jpg")
             
     if st.sidebar.button("My Skills", icon="💻" , type="secondary"):
         st.session_state.page = "skills"

@@ -11,7 +11,8 @@ This is my first Streamlit website!
 * 💻 Building projects to improve my skills
 * 🌱 Always eager to learn new technologies
 """)
-        st.image("Portfolio/IMG_20250320_165115.jpg")
+        image_url = "https://raw.githubusercontent.com/dwarikakohar/150-Useful/main/Portfolio/IMG_20250320_165115.jpg"
+        st.image(image_url, caption="My Image")
             
     if st.sidebar.button("My Skills", icon="💻" , type="secondary"):
         st.session_state.page = "skills"

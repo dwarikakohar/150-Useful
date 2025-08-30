@@ -13,17 +13,28 @@ This is my first Streamlit website!
 """)
         image_url = "https://raw.githubusercontent.com/dwarikakohar/150-Useful/main/Portfolio/Gemini_Generated_Image_y5dt34y5dt34y5dt.png"
         st.image(image_url, caption="My Image")
+
+    if st.sidebar.button("Home", icon="🏠" , type="secondary"):
+        st.session_state.page = "home"
+        st.write("## Home")
+        st.write("Welcome to my personal website!")
+        st.write("Feel free to explore the different sections using the sidebar.")
             
     if st.sidebar.button("My Skills", icon="💻" , type="secondary"):
         st.session_state.page = "skills"
         st.write("## My Skills")
         st.write("""
         - Python
-        - HTML
-        - CSS
+        - Data Manipulation with Pandas, NumPy, Matplotlib
         - Streamlit
         """)
 
+    if st.sidebar.button("Projects", icon="📂" , type="secondary"):
+        st.session_state.page = "projects"
+        st.write("## Projects")
+        pass
+
+    
     if st.sidebar.button("Connect With Me", icon="🤝" , type="secondary"):
         st.session_state.page = "contact"
         st.write("## Connect With Me")
@@ -35,12 +46,6 @@ This is my first Streamlit website!
         st.button("Twitter", on_click=lambda: st.write("[Twitter](https://x.com/DwarikaKoh33958)"), icon="🐦" , type="primary")
         st.markdown("I am on YouTube at")
         st.button("YouTube", icon="📹", on_click=lambda: st.write("[YouTube](https://www.youtube.com/@dwarika-kohar)"), type="primary")
-
-    if st.sidebar.button("Home", icon="🏠" , type="secondary"):
-        st.session_state.page = "home"
-        st.write("## Home")
-        st.write("Welcome to my personal website!")
-        st.write("Feel free to explore the different sections using the sidebar.")
 
     if st.sidebar.button("Education", icon="🎓" , type="secondary"):
         st.session_state.page = "education"
